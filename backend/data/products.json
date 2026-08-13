@@ -1,0 +1,44 @@
+[
+    {
+      "product_id": "P001",
+      "name": "Wireless Keyboard",
+      "description": "Compact wireless keyboard with rechargeable battery",
+      "price": 450,
+      "stock_quantity": 24
+    },
+    {
+      "product_id": "P002",
+      "name": "Wireless Mouse",
+      "description": "Ergonomic wireless mouse for everyday use",
+      "price": 250,
+      "stock_quantity": 0
+    },
+    {
+      "product_id": "P003",
+      "name": "USB-C Hub",
+      "description": "7-in-1 USB-C hub with HDMI and USB ports",
+      "price": 600,
+      "stock_quantity": 7
+    },
+    {
+      "product_id": "P004",
+      "name": "24-inch Monitor",
+      "description": "Full HD 24-inch LED monitor",
+      "price": 3200,
+      "stock_quantity": 15
+    },
+    {
+      "product_id": "P005",
+      "name": "Mechanical Keyboard",
+      "description": "RGB mechanical keyboard with blue switches",
+      "price": 850,
+      "stock_quantity": 4
+    },
+    {
+      "product_id": "P006",
+      "name": "Wireless Headphones",
+      "description": "Bluetooth over-ear wireless headphones",
+      "price": 1200,
+      "stock_quantity": 18
+    }
+  ]
