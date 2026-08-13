@@ -1,0 +1,50 @@
+[
+    {
+      "order_id": "NS1001",
+      "customer_name": "James Banda",
+      "product": "Wireless Keyboard",
+      "status": "Processing",
+      "order_date": "2026-08-08",
+      "expected_delivery": "2026-08-15"
+    },
+    {
+      "order_id": "NS1002",
+      "customer_name": "Sarah Mwansa",
+      "product": "Wireless Headphones",
+      "status": "Confirmed",
+      "order_date": "2026-08-09",
+      "expected_delivery": "2026-08-16"
+    },
+    {
+      "order_id": "NS1003",
+      "customer_name": "David Phiri",
+      "product": "24-inch Monitor",
+      "status": "Shipped",
+      "order_date": "2026-08-06",
+      "expected_delivery": "2026-08-14"
+    },
+    {
+      "order_id": "NS1004",
+      "customer_name": "Mary Tembo",
+      "product": "USB-C Hub",
+      "status": "Out for Delivery",
+      "order_date": "2026-08-05",
+      "expected_delivery": "2026-08-13"
+    },
+    {
+      "order_id": "NS1005",
+      "customer_name": "Brian Zulu",
+      "product": "Mechanical Keyboard",
+      "status": "Delivered",
+      "order_date": "2026-08-01",
+      "expected_delivery": "2026-08-08"
+    },
+    {
+      "order_id": "NS1006",
+      "customer_name": "Linda Phiri",
+      "product": "Wireless Mouse",
+      "status": "Cancelled",
+      "order_date": "2026-08-03",
+      "expected_delivery": null
+    }
+  ]
