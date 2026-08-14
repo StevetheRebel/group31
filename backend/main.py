@@ -1,7 +1,6 @@
 from fastapi import FastAPI, HTTPException, Query
 
 from models import OrderResponse, ProductSearchResponse
-
 from services.order_service import get_order
 from services.product_service import search_products
 
@@ -27,7 +26,10 @@ def health_check():
     }
 
 
-@app.get("/api/orders/{order_id}", response_model=OrderResponse)
+@app.get(
+    "/api/orders/{order_id}",
+    response_model=OrderResponse
+)
 def get_order_status(order_id: str):
     order = get_order(order_id)
 
@@ -49,14 +51,19 @@ def search_product(
         ...,
         min_length=1,
         description="Product name or keyword to search for"
+    ),
+    size: int | None = Query(
+        None,
+        ge=1,
+        description="Optional shoe size filter"
     )
 ):
-    results = search_products(query)
+    results = search_products(query, size)
 
     if not results:
         raise HTTPException(
             status_code=404,
-            detail=f"No products found matching '{query}'."
+            detail="No products found matching the search criteria."
         )
 
     return {

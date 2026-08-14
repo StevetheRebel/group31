@@ -20,7 +20,7 @@ def calculate_availability(stock_quantity: int) -> str:
     return "In Stock"
 
 
-def search_products(query: str):
+def search_products(query: str, size: int | None = None):
     products = load_products()
 
     query = query.lower().strip()
@@ -28,11 +28,20 @@ def search_products(query: str):
     results = []
 
     for product in products:
-        if query in product["name"].lower():
-            product_result = product.copy()
-            product_result["availability"] = calculate_availability(
-                product["stock_quantity"]
-            )
-            results.append(product_result)
+        name_matches = query in product["name"].lower()
+
+        if not name_matches:
+            continue
+
+        if size is not None and size not in product["available_sizes"]:
+            continue
+
+        product_result = product.copy()
+
+        product_result["availability"] = calculate_availability(
+            product["stock_quantity"]
+        )
+
+        results.append(product_result)
 
     return results
