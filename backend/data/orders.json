@@ -1,50 +1,182 @@
 [
-    {
-      "order_id": "NS1001",
-      "customer_name": "James Banda",
-      "product": "Wireless Keyboard",
-      "status": "Processing",
-      "order_date": "2026-08-08",
-      "expected_delivery": "2026-08-15"
-    },
-    {
-      "order_id": "NS1002",
-      "customer_name": "Sarah Mwansa",
-      "product": "Wireless Headphones",
-      "status": "Confirmed",
-      "order_date": "2026-08-09",
-      "expected_delivery": "2026-08-16"
-    },
-    {
-      "order_id": "NS1003",
-      "customer_name": "David Phiri",
-      "product": "24-inch Monitor",
-      "status": "Shipped",
-      "order_date": "2026-08-06",
-      "expected_delivery": "2026-08-14"
-    },
-    {
-      "order_id": "NS1004",
-      "customer_name": "Mary Tembo",
-      "product": "USB-C Hub",
-      "status": "Out for Delivery",
-      "order_date": "2026-08-05",
-      "expected_delivery": "2026-08-13"
-    },
-    {
-      "order_id": "NS1005",
-      "customer_name": "Brian Zulu",
-      "product": "Mechanical Keyboard",
-      "status": "Delivered",
-      "order_date": "2026-08-01",
-      "expected_delivery": "2026-08-08"
-    },
-    {
-      "order_id": "NS1006",
-      "customer_name": "Linda Phiri",
-      "product": "Wireless Mouse",
-      "status": "Cancelled",
-      "order_date": "2026-08-03",
-      "expected_delivery": null
-    }
-  ]
+  {
+    "order_id": "NS1001",
+    "customer_name": "Kevin Otieno",
+    "product": "Nike Air Max 270",
+    "size": 9,
+    "status": "Processing",
+    "order_date": "2026-08-11",
+    "expected_delivery": "2026-08-17"
+  },
+  {
+    "order_id": "NS1002",
+    "customer_name": "Amina Kamau",
+    "product": "Alexander McQueen Oversized Sneaker",
+    "size": 10,
+    "status": "Confirmed",
+    "order_date": "2026-08-10",
+    "expected_delivery": "2026-08-16"
+  },
+  {
+    "order_id": "NS1003",
+    "customer_name": "Brian Kiprop",
+    "product": "Adidas Samba OG",
+    "size": 8,
+    "status": "Shipped",
+    "order_date": "2026-08-08",
+    "expected_delivery": "2026-08-14"
+  },
+  {
+    "order_id": "NS1004",
+    "customer_name": "Faith Wanjiku",
+    "product": "Puma Suede Classic",
+    "size": 7,
+    "status": "Out for Delivery",
+    "order_date": "2026-08-07",
+    "expected_delivery": "2026-08-13"
+  },
+  {
+    "order_id": "NS1005",
+    "customer_name": "Dennis Maina",
+    "product": "Nike Air Force 1 '07",
+    "size": 10,
+    "status": "Delivered",
+    "order_date": "2026-08-02",
+    "expected_delivery": "2026-08-08"
+  },
+  {
+    "order_id": "NS1006",
+    "customer_name": "Mercy Muthoni",
+    "product": "Air Jordan 4 Retro 'Bred'",
+    "size": 9,
+    "status": "Cancelled",
+    "order_date": "2026-08-05",
+    "expected_delivery": null
+  },
+  {
+    "order_id": "NS1007",
+    "customer_name": "Juma Omondi",
+    "product": "Adidas Ultraboost Light",
+    "size": 11,
+    "status": "Processing",
+    "order_date": "2026-08-12",
+    "expected_delivery": "2026-08-18"
+  },
+  {
+    "order_id": "NS1008",
+    "customer_name": "Stacy Chebet",
+    "product": "Puma Velocity Nitro 2",
+    "size": 10,
+    "status": "Shipped",
+    "order_date": "2026-08-09",
+    "expected_delivery": "2026-08-15"
+  },
+  {
+    "order_id": "NS1009",
+    "customer_name": "Victor Mwangi",
+    "product": "Converse Chuck Taylor All Star",
+    "size": 6,
+    "status": "Delivered",
+    "order_date": "2026-08-04",
+    "expected_delivery": "2026-08-10"
+  },
+  {
+    "order_id": "NS1010",
+    "customer_name": "Joy Nyambura",
+    "product": "Vans Old Skool",
+    "size": 12,
+    "status": "Confirmed",
+    "order_date": "2026-08-11",
+    "expected_delivery": "2026-08-16"
+  },
+  {
+    "order_id": "NS1011",
+    "customer_name": "Emmanuel Korir",
+    "product": "Adidas Yeezy Boost 350 V2",
+    "size": 8,
+    "status": "Processing",
+    "order_date": "2026-08-12",
+    "expected_delivery": "2026-08-18"
+  },
+  {
+    "order_id": "NS1012",
+    "customer_name": "Sharon Akinyi",
+    "product": "Balenciaga Triple S",
+    "size": 9,
+    "status": "Out for Delivery",
+    "order_date": "2026-08-07",
+    "expected_delivery": "2026-08-13"
+  },
+  {
+    "order_id": "NS1013",
+    "customer_name": "Peter Njoroge",
+    "product": "Crocs Classic Clog",
+    "size": 7,
+    "status": "Delivered",
+    "order_date": "2026-08-03",
+    "expected_delivery": "2026-08-09"
+  },
+  {
+    "order_id": "NS1014",
+    "customer_name": "Brenda Cherono",
+    "product": "New Balance 550",
+    "size": 10,
+    "status": "Cancelled",
+    "order_date": "2026-08-06",
+    "expected_delivery": null
+  },
+  {
+    "order_id": "NS1015",
+    "customer_name": "Kelvin Wafula",
+    "product": "Air Jordan 1 Retro High OG",
+    "size": 8,
+    "status": "Shipped",
+    "order_date": "2026-08-09",
+    "expected_delivery": "2026-08-15"
+  },
+  {
+    "order_id": "NS1016",
+    "customer_name": "Wanjiru Karanja",
+    "product": "Birkenstock Arizona Sandals",
+    "size": 8,
+    "status": "Processing",
+    "order_date": "2026-08-12",
+    "expected_delivery": "2026-08-18"
+  },
+  {
+    "order_id": "NS1017",
+    "customer_name": "Cynthia Atieno",
+    "product": "Christian Louboutin So Kate Pumps",
+    "size": 38,
+    "status": "Confirmed",
+    "order_date": "2026-08-11",
+    "expected_delivery": "2026-08-17"
+  },
+  {
+    "order_id": "NS1018",
+    "customer_name": "Brian Kipkemboi",
+    "product": "Clarks Desert Boots",
+    "size": 9,
+    "status": "Shipped",
+    "order_date": "2026-08-08",
+    "expected_delivery": "2026-08-14"
+  },
+  {
+    "order_id": "NS1019",
+    "customer_name": "Moses Wanyonyi",
+    "product": "Timberland 6-Inch Premium Boot",
+    "size": 10,
+    "status": "Out for Delivery",
+    "order_date": "2026-08-07",
+    "expected_delivery": "2026-08-13"
+  },
+  {
+    "order_id": "NS1020",
+    "customer_name": "Christine Njeri",
+    "product": "Gucci Jordaan Leather Loafer",
+    "size": 7,
+    "status": "Cancelled",
+    "order_date": "2026-08-05",
+    "expected_delivery": null
+  }
+]
