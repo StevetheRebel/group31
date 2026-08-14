@@ -22,6 +22,8 @@ def test_valid_order():
 
     assert data["order_id"] == "NS1003"
     assert data["status"] == "Shipped"
+    assert data["product"] == "Adidas Samba OG"
+    assert data["size"] == 8
 
 
 def test_unknown_order():
@@ -32,7 +34,7 @@ def test_unknown_order():
 
 def test_product_search():
     response = client.get(
-        "/api/products/search?query=keyboard"
+        "/api/products/search?query=Nike"
     )
 
     assert response.status_code == 200
@@ -44,7 +46,7 @@ def test_product_search():
 
 def test_out_of_stock_product():
     response = client.get(
-        "/api/products/search?query=mouse"
+        "/api/products/search?query=Jordan%204"
     )
 
     assert response.status_code == 200
@@ -57,20 +59,20 @@ def test_out_of_stock_product():
 
 def test_low_stock_product():
     response = client.get(
-        "/api/products/search?query=hub"
+        "/api/products/search?query=Samba"
     )
 
     assert response.status_code == 200
 
     product = response.json()["results"][0]
 
-    assert product["stock_quantity"] == 7
+    assert product["stock_quantity"] == 5
     assert product["availability"] == "Low Stock"
 
 
 def test_in_stock_product():
     response = client.get(
-        "/api/products/search?query=monitor"
+        "/api/products/search?query=Air%20Max"
     )
 
     assert response.status_code == 200
@@ -86,3 +88,37 @@ def test_unknown_product():
     )
 
     assert response.status_code == 404
+
+
+def test_product_search_by_size():
+    response = client.get(
+        "/api/products/search?query=Nike%20Air%20Max&size=9"
+    )
+
+    assert response.status_code == 200
+
+    results = response.json()["results"]
+
+    assert len(results) == 1
+    assert results[0]["name"] == "Nike Air Max 270"
+    assert 9 in results[0]["available_sizes"]
+
+
+def test_product_search_unavailable_size():
+    response = client.get(
+        "/api/products/search?query=Nike%20Air%20Max&size=12"
+    )
+
+    assert response.status_code == 404
+
+
+def test_product_search_multiple_results():
+    response = client.get(
+        "/api/products/search?query=Adidas"
+    )
+
+    assert response.status_code == 200
+
+    results = response.json()["results"]
+
+    assert len(results) >= 2

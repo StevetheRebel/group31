@@ -1,44 +1,182 @@
 [
-    {
-      "product_id": "P001",
-      "name": "Wireless Keyboard",
-      "description": "Compact wireless keyboard with rechargeable battery",
-      "price": 450,
-      "stock_quantity": 24
-    },
-    {
-      "product_id": "P002",
-      "name": "Wireless Mouse",
-      "description": "Ergonomic wireless mouse for everyday use",
-      "price": 250,
-      "stock_quantity": 0
-    },
-    {
-      "product_id": "P003",
-      "name": "USB-C Hub",
-      "description": "7-in-1 USB-C hub with HDMI and USB ports",
-      "price": 600,
-      "stock_quantity": 7
-    },
-    {
-      "product_id": "P004",
-      "name": "24-inch Monitor",
-      "description": "Full HD 24-inch LED monitor",
-      "price": 3200,
-      "stock_quantity": 15
-    },
-    {
-      "product_id": "P005",
-      "name": "Mechanical Keyboard",
-      "description": "RGB mechanical keyboard with blue switches",
-      "price": 850,
-      "stock_quantity": 4
-    },
-    {
-      "product_id": "P006",
-      "name": "Wireless Headphones",
-      "description": "Bluetooth over-ear wireless headphones",
-      "price": 1200,
-      "stock_quantity": 18
-    }
-  ]
+  {
+    "product_id": "P001",
+    "name": "Nike Air Max 270",
+    "category": "Sneakers",
+    "description": "Lifestyle sneaker featuring a large Max Air unit for maximum cushioning",
+    "price": 1800,
+    "available_sizes": [7, 8, 9, 10, 11],
+    "stock_quantity": 24
+  },
+  {
+    "product_id": "P002",
+    "name": "Air Jordan 4 Retro 'Bred'",
+    "category": "Basketball / Lifestyle",
+    "description": "Iconic high-top sneaker with classic black and red suede design",
+    "price": 3200,
+    "available_sizes": [],
+    "stock_quantity": 0
+  },
+  {
+    "product_id": "P003",
+    "name": "Adidas Samba OG",
+    "category": "Casual",
+    "description": "Classic low-profile leather sneaker with suede overlay",
+    "price": 1400,
+    "available_sizes": [8, 9, 10],
+    "stock_quantity": 5
+  },
+  {
+    "product_id": "P004",
+    "name": "Puma Suede Classic",
+    "category": "Casual",
+    "description": "Timeless low-top suede sneakers with signature Puma formstrip",
+    "price": 1100,
+    "available_sizes": [6, 7, 8, 9, 10, 11, 12],
+    "stock_quantity": 18
+  },
+  {
+    "product_id": "P005",
+    "name": "Alexander McQueen Oversized Sneaker",
+    "category": "Luxury",
+    "description": "Smooth calfskin sneaker with transparent oversized chunky sole",
+    "price": 6500,
+    "available_sizes": [9, 10],
+    "stock_quantity": 3
+  },
+  {
+    "product_id": "P006",
+    "name": "Nike Air Force 1 '07",
+    "category": "Casual",
+    "description": "Classic crisp white leather basketball-inspired sneaker",
+    "price": 1500,
+    "available_sizes": [7, 8, 9, 10, 11],
+    "stock_quantity": 12
+  },
+  {
+    "product_id": "P007",
+    "name": "Adidas Ultraboost Light",
+    "category": "Running",
+    "description": "High-performance running shoe with responsive Boost midsole",
+    "price": 2200,
+    "available_sizes": [8, 9, 11],
+    "stock_quantity": 8
+  },
+  {
+    "product_id": "P008",
+    "name": "New Balance 550",
+    "category": "Lifestyle",
+    "description": "Retro basketball sneaker with heavy leather upper",
+    "price": 1600,
+    "available_sizes": [],
+    "stock_quantity": 0
+  },
+  {
+    "product_id": "P009",
+    "name": "Puma Velocity Nitro 2",
+    "category": "Running",
+    "description": "All-in-one running shoe with lightweight Nitro foam responsive cushioning",
+    "price": 1750,
+    "available_sizes": [9, 10, 11, 12],
+    "stock_quantity": 15
+  },
+  {
+    "product_id": "P010",
+    "name": "Air Jordan 1 Retro High OG",
+    "category": "Basketball / Lifestyle",
+    "description": "The legend that started it all, premium leather high-top silhouette",
+    "price": 2900,
+    "available_sizes": [8, 9],
+    "stock_quantity": 2
+  },
+  {
+    "product_id": "P011",
+    "name": "Converse Chuck Taylor All Star",
+    "category": "Casual",
+    "description": "High-top canvas sneaker with iconic ankle patch",
+    "price": 850,
+    "available_sizes": [6, 7, 8, 9, 10],
+    "stock_quantity": 30
+  },
+  {
+    "product_id": "P012",
+    "name": "Vans Old Skool",
+    "category": "Skateboarding",
+    "description": "Classic side-stripe skate shoe with durable canvas and suede",
+    "price": 950,
+    "available_sizes": [10, 11, 12, 13],
+    "stock_quantity": 9
+  },
+  {
+    "product_id": "P013",
+    "name": "Adidas Yeezy Boost 350 V2",
+    "category": "Lifestyle",
+    "description": "Re-engineered Primeknit upper with distinctive Boost midsole cushioning",
+    "price": 3800,
+    "available_sizes": [7, 8, 9],
+    "stock_quantity": 4
+  },
+  {
+    "product_id": "P014",
+    "name": "Balenciaga Triple S",
+    "category": "Luxury",
+    "description": "Iconic complex three-layered outsole chunky designer sneaker",
+    "price": 8200,
+    "available_sizes": [8, 9, 10, 11],
+    "stock_quantity": 11
+  },
+  {
+    "product_id": "P015",
+    "name": "Crocs Classic Clog",
+    "category": "Casual",
+    "description": "Lightweight water-friendly cushioned clogs",
+    "price": 600,
+    "available_sizes": [6, 7, 8, 9, 10, 11],
+    "stock_quantity": 22
+  },
+  {
+    "product_id": "P016",
+    "name": "Birkenstock Arizona Sandals",
+    "category": "Sandals",
+    "description": "Classic two-strap adjustable buckled suede sandal with cork footbed",
+    "price": 1300,
+    "available_sizes": [6, 7, 8, 9, 10],
+    "stock_quantity": 16
+  },
+  {
+    "product_id": "P017",
+    "name": "Christian Louboutin So Kate Pumps",
+    "category": "Heels / Formal",
+    "description": "Classic pointed-toe stiletto pump with signature red lacquered sole",
+    "price": 7800,
+    "available_sizes": [37, 38, 39, 40],
+    "stock_quantity": 3
+  },
+  {
+    "product_id": "P018",
+    "name": "Clarks Desert Boots",
+    "category": "Boots / Casual",
+    "description": "Iconic suede chukka boots with crepe rubber soles",
+    "price": 1900,
+    "available_sizes": [8, 9, 10, 11],
+    "stock_quantity": 7
+  },
+  {
+    "product_id": "P019",
+    "name": "Timberland 6-Inch Premium Boot",
+    "category": "Boots / Outdoor",
+    "description": "Waterproof wheat nubuck leather rugged work boots",
+    "price": 2600,
+    "available_sizes": [7, 8, 9, 10, 11, 12],
+    "stock_quantity": 10
+  },
+  {
+    "product_id": "P020",
+    "name": "Gucci Jordaan Leather Loafer",
+    "category": "Formal / Luxury",
+    "description": "Slim leather loafers featuring signature gold-tone horsebit detail",
+    "price": 7200,
+    "available_sizes": [],
+    "stock_quantity": 0
+  }
+]
