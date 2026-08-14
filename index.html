@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NorthShoes — Fresh kicks, big energy. Shop the latest sneakers, heels and luxury footwear in Kenya. Fast delivery, genuine products." />
+  <title>NorthShoes | Step Into Your Vibe</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       HEADER / NAVIGATION
+  ═══════════════════════════════════════════════ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+
+      <!-- Logo -->
+      <a href="#home" class="header__logo" aria-label="NorthShoes Home">
+        <img src="/static/images/northshoes-logo.png" alt="NorthShoes Logo" class="header__logo-img" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="header__nav" aria-label="Main navigation">
+        <ul class="header__nav-list" id="nav-list">
+          <li><a href="#home"    class="nav-link active" data-section="home">Home</a></li>
+          <li><a href="#shop"    class="nav-link"        data-section="shop">Shop</a></li>
+          <li><a href="#order"   class="nav-link"        data-section="order">Order</a></li>
+          <li><a href="#orders"  class="nav-link"        data-section="orders">My Orders</a></li>
+          <li><a href="#stock"   class="nav-link"        data-section="stock">Stock</a></li>
+          <li><a href="#contact" class="nav-link"        data-section="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Cart indicator + Hamburger -->
+      <div class="header__actions">
+        <button class="cart-btn" id="cart-btn" aria-label="View cart">
+          <span class="cart-icon">🛍</span>
+          <span class="cart-count" id="cart-count" aria-live="polite">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul class="mobile-menu__list">
+        <li><a href="#home"    class="mobile-nav-link" data-section="home">Home</a></li>
+        <li><a href="#shop"    class="mobile-nav-link" data-section="shop">Shop</a></li>
+        <li><a href="#order"   class="mobile-nav-link" data-section="order">Order</a></li>
+        <li><a href="#orders"  class="mobile-nav-link" data-section="orders">My Orders</a></li>
+        <li><a href="#stock"   class="mobile-nav-link" data-section="stock">Stock</a></li>
+        <li><a href="#contact" class="mobile-nav-link" data-section="contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+  <!-- ═══════════════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════════════ -->
+  <section class="hero" id="home" aria-label="Hero section">
+    <div class="hero__bg-shapes" aria-hidden="true">
+      <div class="shape shape--1"></div>
+      <div class="shape shape--2"></div>
+      <div class="shape shape--3"></div>
+    </div>
+
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="hero__eyebrow">🔥 New drops every week</span>
+        <h1 class="hero__headline">STEP INTO<br /><span class="hero__headline--accent">YOUR VIBE</span></h1>
+        <p class="hero__sub">Fresh kicks. Big energy.<br />Kenya's freshest footwear, delivered to your door.</p>
+        <div class="hero__cta-group">
+          <a href="#shop" class="btn btn--primary btn--lg" id="hero-shop-btn">Shop Now</a>
+          <a href="#shop" class="btn btn--outline btn--lg" id="hero-collection-btn">View Collection</a>
+        </div>
+        <div class="hero__stats" aria-label="Store statistics">
+          <div class="stat">
+            <span class="stat__num" id="stat-products">8</span>
+            <span class="stat__label">Products</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">KES</span>
+            <span class="stat__label">Kenya Shillings</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">🚀</span>
+            <span class="stat__label">Fast Delivery</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__image-wrap" aria-hidden="true">
+        <div class="hero__image-ring"></div>
+        <img src="/static/images/nike-dunk-blue.jpg" alt="Featured Nike Dunk Low Midnight" class="hero__shoe-img" id="hero-img" />
+        <div class="hero__badge-float">
+          <span class="badge badge--hot">🔥 Trending Now</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       SHOP / PRODUCT CATALOGUE
+  ═══════════════════════════════════════════════ -->
+  <section class="section shop" id="shop" aria-label="Product catalogue">
+    <div class="container">
+
+      <!-- Section Header -->
+      <div class="section__header">
+        <span class="section__eyebrow">Our Collection</span>
+        <h2 class="section__title">Fresh Drops</h2>
+        <p class="section__sub">Authentic footwear, real prices. Pick your pair.</p>
+      </div>
+
+      <!-- Category Filter -->
+      <div class="filter-bar" role="group" aria-label="Filter by category">
+        <button class="filter-btn active" data-cat="all"      id="filter-all">All</button>
+        <button class="filter-btn" data-cat="sneakers"        id="filter-sneakers">Sneakers</button>
+        <button class="filter-btn" data-cat="running"         id="filter-running">Running</button>
+        <button class="filter-btn" data-cat="casual"          id="filter-casual">Casual</button>
+        <button class="filter-btn" data-cat="heels"           id="filter-heels">Heels</button>
+        <button class="filter-btn" data-cat="luxury"          id="filter-luxury">Luxury</button>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="product-grid" id="product-grid" role="list" aria-live="polite">
+        <!-- Cards injected by app.js -->
+        <div class="loading-spinner" id="shop-loader" aria-label="Loading products">
+          <div class="spinner"></div>
+          <p>Loading kicks...</p>
+        </div>
+      </div>
+
+      <!-- Error State -->
+      <div class="error-state hidden" id="shop-error" role="alert">
+        <p>😢 Couldn't load products right now. Please refresh the page.</p>
+      </div>
+
+      <!-- Empty State -->
+      <div class="empty-state hidden" id="shop-empty" role="status">
+        <p>No shoes found in this category.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       ORDER SECTION
+  ═══════════════════════════════════════════════ -->
+  <section class="section order-section" id="order" aria-label="Place an order">
+    <div class="container">
+
+      <div class="section__header">
+        <span class="section__eyebrow">Ready?</span>
+        <h2 class="section__title">Place Your Order</h2>
+        <p class="section__sub">Fill in your details, pick your size, and we'll handle the rest.</p>
+      </div>
+
+      <div class="order-layout">
+
+        <!-- ── Order Form ── -->
+        <div class="order-form-card">
+          <form id="order-form" novalidate aria-label="Order form">
+
+            <!-- Customer Info -->
+            <div class="form-group">
+              <label for="customer-name" class="form-label">Full Name <span class="required">*</span></label>
+              <input type="text" id="customer-name" name="customer_name"
+                     class="form-input" placeholder="e.g. Jane Kamau"
+                     autocomplete="name" required />
+              <span class="form-error" id="err-name" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone" class="form-label">Phone Number <span class="required">*</span></label>
+              <input type="tel" id="phone" name="phone"
+                     class="form-input" placeholder="e.g. 0712 345 678"
+                     autocomplete="tel" required />
+              <span class="form-error" id="err-phone" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email <span class="optional">(optional)</span></label>
+              <input type="email" id="email" name="email"
+                     class="form-input" placeholder="e.g. jane@email.com"
+                     autocomplete="email" />
+            </div>
+
+            <div class="form-group">
+              <label for="location" class="form-label">Delivery Location <span class="optional">(optional)</span></label>
+              <input type="text" id="location" name="location"
+                     class="form-input" placeholder="e.g. Westlands, Nairobi" />
+            </div>
+
+            <hr class="form-divider" />
+
+            <!-- Product Selection -->
+            <div class="form-group">
+              <label for="product-select" class="form-label">Choose Your Shoe <span class="required">*</span></label>
+              <select id="product-select" name="product_id" class="form-select" required>
+                <option value="">— Select a shoe —</option>
+                <!-- Options injected by app.js -->
+              </select>
+              <span class="form-error" id="err-product" role="alert"></span>
+            </div>
+
+            <!-- Size Selection -->
+            <div class="form-group">
+              <label class="form-label">Select Size <span class="required">*</span></label>
+              <div class="size-grid" id="size-grid" role="group" aria-label="Available sizes">
+                <p class="size-placeholder">Select a shoe to see available sizes</p>
+              </div>
+              <input type="hidden" id="selected-size" name="size" />
+              <span class="form-error" id="err-size" role="alert"></span>
+            </div>
+
+            <!-- Quantity -->
+            <div class="form-group">
+              <label for="quantity" class="form-label">Quantity <span class="required">*</span></label>
+              <div class="qty-wrap">
+                <button type="button" class="qty-btn" id="qty-minus" aria-label="Decrease quantity">−</button>
+                <input type="number" id="quantity" name="quantity"
+                       class="form-input qty-input" value="1" min="1" max="99" required />
+                <button type="button" class="qty-btn" id="qty-plus" aria-label="Increase quantity">+</button>
+              </div>
+              <span class="form-error" id="err-qty" role="alert"></span>
+            </div>
+
+            <!-- Notes -->
+            <div class="form-group">
+              <label for="notes" class="form-label">Additional Notes <span class="optional">(optional)</span></label>
+              <textarea id="notes" name="notes" class="form-input form-textarea"
+                        placeholder="Any special requests or delivery instructions..."></textarea>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="btn btn--primary btn--full" id="submit-order-btn">
+              <span class="btn-text">Place Order</span>
+              <span class="btn-spinner hidden" aria-hidden="true"></span>
+            </button>
+
+            <!-- Global form error -->
+            <div class="form-global-error hidden" id="form-global-error" role="alert"></div>
+          </form>
+        </div>
+
+        <!-- ── Order Summary Panel ── -->
+        <div class="order-sidebar">
+
+          <!-- Selected Product Preview -->
+          <div class="order-preview-card" id="order-preview">
+            <h3 class="panel-title">Your Selection</h3>
+            <div class="preview-empty" id="preview-empty">
+              <span class="preview-icon">👟</span>
+              <p>Select a shoe to see a preview</p>
+            </div>
+            <div class="preview-content hidden" id="preview-content">
+              <img src="" alt="" class="preview-img" id="preview-img" />
+              <div class="preview-details">
+                <p class="preview-name"  id="preview-name"></p>
+                <p class="preview-cat"   id="preview-cat"></p>
+                <p class="preview-price" id="preview-price"></p>
+                <div class="stock-display" id="stock-display">
+                  <div class="stock-bar-wrap">
+                    <div class="stock-bar" id="stock-bar"></div>
+                  </div>
+                  <p class="stock-label" id="stock-label-text"></p>
+                </div>
+                <p class="preview-total" id="preview-total"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order Status Panel -->
+          <div class="status-card" id="status-card">
+            <h3 class="panel-title">Order Status</h3>
+            <div class="status-empty" id="status-empty">
+              <span class="status-icon">📋</span>
+              <p class="status-empty-text">No order yet</p>
+              <p class="status-hint">Place an order to see your status here.</p>
+            </div>
+            <div class="status-content hidden" id="status-content">
+              <div class="status-badge-wrap">
+                <span class="status-badge" id="status-badge"></span>
+              </div>
+              <p class="status-order-id" id="status-order-id"></p>
+              <div class="status-steps" id="status-steps" aria-label="Order progress">
+                <div class="step active" data-step="received">
+                  <div class="step-dot"></div>
+                  <span>Order Received</span>
+                </div>
+                <div class="step" data-step="processing">
+                  <div class="step-dot"></div>
+                  <span>Processing</span>
+                </div>
+                <div class="step" data-step="confirmed">
+                  <div class="step-dot"></div>
+                  <span>Confirmed</span>
+                </div>
+                <div class="step" data-step="delivery">
+                  <div class="step-dot"></div>
+                  <span>Ready for Delivery</span>
+                </div>
+                <div class="step" data-step="completed">
+                  <div class="step-dot"></div>
+                  <span>Completed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       ORDER RESULT / CONFIRMATION
+  ═══════════════════════════════════════════════ -->
+  <div class="order-result-overlay hidden" id="order-result-overlay" role="dialog" aria-modal="true" aria-labelledby="result-heading">
+    <div class="order-result-card" id="order-result-card">
+      <div class="result-header">
+        <div class="result-check" aria-hidden="true">✓</div>
+        <h2 class="result-heading" id="result-heading">Order Confirmed!</h2>
+        <p class="result-sub" id="result-sub"></p>
+      </div>
+
+      <div class="result-details">
+        <div class="result-row">
+          <span class="result-key">Order ID</span>
+          <span class="result-val" id="result-order-id"></span>
+        </div>
+        <div class="result-row">
+          <span class="result-key">Shoe</span>
+          <span class="result-val" id="result-shoe"></span>
+        </div>
+        <div class="result-row">
+          <span class="result-key">Size</span>
+          <span class="result-val" id="result-size"></span>
+        </div>
+        <div class="result-row">
+          <span class="result-key">Quantity</span>
+          <span class="result-val" id="result-qty"></span>
+        </div>
+        <div class="result-row result-row--total">
+          <span class="result-key">Total</span>
+          <span class="result-val result-val--total" id="result-total"></span>
+        </div>
+        <div class="result-row">
+          <span class="result-key">Customer</span>
+          <span class="result-val" id="result-customer"></span>
+        </div>
+        <div class="result-row">
+          <span class="result-key">Status</span>
+          <span class="result-val"><span class="status-badge" id="result-status"></span></span>
+        </div>
+      </div>
+
+      <div class="result-actions">
+        <button class="btn btn--primary" id="result-close-btn">Continue Shopping</button>
+        <a href="#contact" class="btn btn--outline" id="result-contact-btn">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════
+       MY ORDERS SECTION
+  ═══════════════════════════════════════════════ -->
+  <section class="section orders-section" id="orders" aria-label="My orders">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__eyebrow">Order History</span>
+        <h2 class="section__title">My Orders</h2>
+        <p class="section__sub">All orders placed through this session.</p>
+      </div>
+
+      <div class="orders-table-wrap">
+        <div class="loading-spinner hidden" id="orders-loader">
+          <div class="spinner"></div>
+          <p>Loading orders...</p>
+        </div>
+        <div class="orders-empty" id="orders-empty">
+          <span class="orders-empty-icon">📦</span>
+          <p>No orders yet. Go grab a pair!</p>
+          <a href="#shop" class="btn btn--primary">Shop Now</a>
+        </div>
+        <table class="orders-table hidden" id="orders-table" aria-label="Orders list">
+          <thead>
+            <tr>
+              <th scope="col">Order ID</th>
+              <th scope="col">Shoe</th>
+              <th scope="col">Size</th>
+              <th scope="col">Qty</th>
+              <th scope="col">Total (KES)</th>
+              <th scope="col">Status</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody id="orders-table-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       STOCK DASHBOARD
+  ═══════════════════════════════════════════════ -->
+  <section class="section stock-section" id="stock" aria-label="Stock availability">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__eyebrow">Availability</span>
+        <h2 class="section__title">Live Stock</h2>
+        <p class="section__sub">Real-time stock levels for all products.</p>
+      </div>
+
+      <div class="stock-grid" id="stock-grid" aria-live="polite">
+        <!-- Injected by app.js -->
+        <div class="loading-spinner" id="stock-loader">
+          <div class="spinner"></div>
+          <p>Loading stock...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       CONTACT SECTION
+  ═══════════════════════════════════════════════ -->
+  <section class="section contact-section" id="contact" aria-label="Contact us">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__eyebrow">Get In Touch</span>
+        <h2 class="section__title">Contact Us</h2>
+        <p class="section__sub">Questions? Orders? We're right here.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <a href="tel:+254700000000" class="contact-card" aria-label="Call us">
+          <div class="contact-icon-wrap contact-icon-wrap--red">
+            <span class="contact-icon" aria-hidden="true">📞</span>
+          </div>
+          <h3 class="contact-title">Call Us</h3>
+          <p class="contact-detail">+254 700 000 000</p>
+          <p class="contact-note">Mon–Sat, 8am–6pm EAT</p>
+          <span class="contact-action">Tap to Call →</span>
+        </a>
+
+        <a href="https://wa.me/254700000000?text=Hi%20NorthShoes!%20I%27d%20like%20to%20place%20an%20order."
+           target="_blank" rel="noopener noreferrer"
+           class="contact-card" aria-label="Chat on WhatsApp">
+          <div class="contact-icon-wrap contact-icon-wrap--green">
+            <span class="contact-icon" aria-hidden="true">💬</span>
+          </div>
+          <h3 class="contact-title">WhatsApp</h3>
+          <p class="contact-detail">+254 700 000 000</p>
+          <p class="contact-note">Fast responses, 7 days a week</p>
+          <span class="contact-action">Chat Now →</span>
+        </a>
+
+        <a href="mailto:hello@northshoes.co.ke" class="contact-card" aria-label="Email us">
+          <div class="contact-icon-wrap contact-icon-wrap--blue">
+            <span class="contact-icon" aria-hidden="true">✉️</span>
+          </div>
+          <h3 class="contact-title">Email Us</h3>
+          <p class="contact-detail">hello@northshoes.co.ke</p>
+          <p class="contact-note">We reply within 24 hours</p>
+          <span class="contact-action">Send Email →</span>
+        </a>
+
+        <div class="contact-card contact-card--location" aria-label="Our location">
+          <div class="contact-icon-wrap contact-icon-wrap--orange">
+            <span class="contact-icon" aria-hidden="true">📍</span>
+          </div>
+          <h3 class="contact-title">Visit Us</h3>
+          <p class="contact-detail">Nairobi, Kenya</p>
+          <p class="contact-note">Westlands — Placeholder Address</p>
+          <span class="contact-action">Get Directions →</span>
+        </div>
+
+      </div>
+
+      <!-- Social Links -->
+      <div class="social-bar" aria-label="Social media links">
+        <span class="social-label">Follow us:</span>
+        <a href="#" class="social-link" aria-label="Instagram">📸 Instagram</a>
+        <a href="#" class="social-link" aria-label="TikTok">🎵 TikTok</a>
+        <a href="#" class="social-link" aria-label="Facebook">👥 Facebook</a>
+        <a href="#" class="social-link" aria-label="X / Twitter">𝕏 Twitter</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="/static/images/northshoes-logo.png" alt="NorthShoes" class="footer__logo" />
+        <p class="footer__tagline">Fresh kicks. Big energy.</p>
+      </div>
+      <div class="footer__links">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#order">Order</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p class="footer__copy">© 2026 NorthShoes. All rights reserved. · Kenya</p>
+    </div>
+  </footer>
+
+  <!-- Back-to-top button -->
+  <button class="back-to-top hidden" id="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- Main JavaScript -->
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
