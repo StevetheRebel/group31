@@ -15,7 +15,7 @@ Pulled from GitHub → **Insights → Contributors** (`https://github.com/<org>/
 |Queenbean Jebet | https://github.com/StevetheRebel/group31/commit/216f9cec43f9d5b8ddfbce8965b598a3a1add62f | | |
 |Steve Odumbe| https://github.com/StevetheRebel/group31/commit/1b4993df928db1e4f269be4199599cbc3f114bda | | |
 
-![Alt text describing the image](../../public/Evidence/Contribution Graph.png)
+<img width="1147" height="657" src="../../public/Evidence/Contribution Graph.png">
 
 
 ## 3. Commit Screenshots
