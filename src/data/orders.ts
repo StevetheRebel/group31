@@ -204,5 +204,5 @@ export const orders: Order[] = [
 ];
 
 export function findOrderById(id: string): Order | undefined {
-  return orders.find((order) => order.order_id === id);
+  return orders.find((order) => order.order_id.toLowerCase() === id);
 }

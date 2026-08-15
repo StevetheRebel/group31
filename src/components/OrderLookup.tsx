@@ -26,7 +26,7 @@ export default function OrderLookup() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    const trimmedId = orderId.trim();
+    const trimmedId = orderId.trim().toLowerCase();
 
     if (!trimmedId) {
       setState({ type: "invalid", message: "Please enter your order ID." });
