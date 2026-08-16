@@ -48,11 +48,11 @@ export default function OrderLookup() {
   };
 
   return (
-    <div className="bg-white rounded-xl border border-gray-200 shadow-sm">
+    <div className="bg-black rounded-xl border border-gray-500 shadow-sm">
       <div className="px-6 py-5 border-b border-gray-100">
         <div className="flex items-center gap-2 mb-1">
-          <Package className="w-5 h-5 text-primary-600" aria-hidden="true" />
-          <h2 className="text-lg font-semibold text-gray-900">
+          <Package className="w-5 h-5 text-gray-600" aria-hidden="true" />
+          <h2 className="text-lg font-sans font-semibold text-white/70">
             Order Status Lookup
           </h2>
         </div>
@@ -66,7 +66,7 @@ export default function OrderLookup() {
           <div>
             <label
               htmlFor="orderId"
-              className="block text-sm font-medium text-gray-700 mb-1.5"
+              className="block text-sm font-medium text-white/60 mb-1.5"
             >
               Order ID
             </label>
@@ -78,7 +78,7 @@ export default function OrderLookup() {
                   value={orderId}
                   onChange={(e) => setOrderId(e.target.value)}
                   placeholder="e.g. NS1001" // ← updated
-                  className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors"
+                  className="w-full pl-10 pr-4 py-2.5 border bg-gray-300 border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors "
                   aria-describedby="orderIdHelp"
                 />
                 <Search
@@ -89,7 +89,7 @@ export default function OrderLookup() {
               <button
                 type="submit"
                 disabled={state.type === "loading"}
-                className="border shrink-0 disabled:border-red-100 rounded-lg text-black flex gap-2 px-2 py-2 items-center shadow-md"
+                className="border shrink-0 disabled:border-red-100 rounded-lg font-sans h-full text-white text-sm flex gap-2 px-2 py-2.5 items-center shadow-md"
               >
                 {state.type === "loading" ? (
                   <>
