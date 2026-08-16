@@ -28,9 +28,15 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full">
+      <body className="min-h-full bg-gray-900 font-san ">
         <div className="max-w-350 mx-auto">
           <NavigationBar />
+          {/* Animated background shapes */}
+          <div className="fixed inset-0 pointer-events-none overflow-hidden">
+            <div className="absolute w-125 h-125 bg-red-600/10 -top-25 -right-25 rounded-full blur-[80px] animate-pulse" />
+            <div className="absolute w-75 h-75 bg-orange-500/10 bottom-10 -left-20 rounded-full blur-[80px] animate-pulse delay-1000" />
+            <div className="absolute w-50 h-50 bg-purple-500/10 top-1/3 left-1/2 rounded-full blur-[80px] animate-pulse delay-700" />
+          </div>
           <main className="flex-1">{children}</main>
         </div>
       </body>
