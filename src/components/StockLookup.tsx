@@ -2,7 +2,7 @@
 
 import { useState, FormEvent } from "react";
 import { InventoryItem } from "../types/inventory";
-import { findInventoryItem } from "../data/inventory";
+import { findInventoryItems } from "../data/inventory"; // ← changed to plural
 import StockResult from "./StockResult";
 import EmptyState from "./EmptyState";
 import LoadingState from "./LoadingState";
@@ -13,7 +13,7 @@ import { Search, Boxes } from "lucide-react";
 type LookupState =
   | { type: "idle" }
   | { type: "loading" }
-  | { type: "success"; item: InventoryItem }
+  | { type: "success"; items: InventoryItem[] } // ← array
   | { type: "notFound" }
   | { type: "error"; message: string }
   | { type: "invalid"; message: string };
@@ -39,21 +39,21 @@ export default function StockLookup() {
 
     await new Promise((resolve) => setTimeout(resolve, 600));
 
-    const item = findInventoryItem(trimmedQuery);
+    const items = findInventoryItems(trimmedQuery); // ← array
 
-    if (item) {
-      setState({ type: "success", item });
+    if (items.length > 0) {
+      setState({ type: "success", items });
     } else {
       setState({ type: "notFound" });
     }
   };
 
   return (
-    <div className="bg-white rounded-xl border border-gray-200 shadow-sm">
+    <div className="bg-black rounded-xl border border-gray-500 shadow-sm">
       <div className="px-6 py-5 border-b border-gray-100">
         <div className="flex items-center gap-2 mb-1">
-          <Boxes className="w-5 h-5 text-primary-600" aria-hidden="true" />
-          <h2 className="text-lg font-semibold text-gray-900">
+          <Boxes className="w-5 h-5 text-gray-600" aria-hidden="true" />
+          <h2 className="text-lg font-sans font-semibold text-white/70">
             Stock Availability Lookup
           </h2>
         </div>
@@ -71,7 +71,7 @@ export default function StockLookup() {
             >
               Product Name or SKU
             </label>
-            <div className="flex flex-col items-start gap-2 md:flex-row md:items-center ">
+            <div className="flex flex-col items-start gap-2 md:flex-row md:items-center">
               <div className="relative w-full">
                 <input
                   id="stockQuery"
@@ -79,7 +79,7 @@ export default function StockLookup() {
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   placeholder="e.g. Nike Air Max 270 or P001"
-                  className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors"
+                  className="w-full pl-10 pr-4 py-2.5 border bg-gray-300 border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors"
                   aria-describedby="stockQueryHelp"
                 />
                 <Search
@@ -90,7 +90,7 @@ export default function StockLookup() {
               <button
                 type="submit"
                 disabled={state.type === "loading"}
-                className="border shrink-0 disabled:border-red-100 rounded-lg text-black flex gap-2 px-2 py-2 items-center shadow-md"
+                className="border font-sans shrink-0 disabled:border-red-100 rounded-lg text-white/70 flex gap-2 px-2 py-2 items-center shadow-md"
               >
                 {state.type === "loading" ? (
                   <>
@@ -112,7 +112,7 @@ export default function StockLookup() {
         </form>
       </div>
 
-      <div className="px-6 pb-6">
+      <div className="px-6 pb-6 space-y-4">
         {state.type === "idle" && (
           <EmptyState
             title="No Product Selected"
@@ -124,13 +124,23 @@ export default function StockLookup() {
           <LoadingState message="Checking stock levels..." />
         )}
 
-        {state.type === "success" && <StockResult item={state.item} />}
+        {state.type === "success" && (
+          <>
+            <p className="text-sm text-gray-400">
+              Found {state.items.length} product
+              {state.items.length > 1 ? "s" : ""}
+            </p>
+            {state.items.map((item) => (
+              <StockResult key={item.product_id} item={item} />
+            ))}
+          </>
+        )}
 
         {state.type === "notFound" && (
           <div className="space-y-4">
             <ErrorState
               title="Product Not Found"
-              message="We couldn't find a matching product. Please check your search details and try again."
+              message="We couldn't find any matching products. Please check your search details and try again."
             />
             <SupportMessage />
           </div>

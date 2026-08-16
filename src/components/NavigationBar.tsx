@@ -28,9 +28,9 @@ export default function NavigationBar() {
   const pathname = usePathname();
 
   return (
-    <header className="w-full px-6 py-3 flex items-center justify-between">
+    <header className="fixed z-100 w-full max-w-350 px-6 py-3 flex items-center justify-between bg-white/10 backdrop-saturate-50 backdrop-blur-sm rounded-b-xl">
       {/* Logo */}
-      <Link href="/" className="relative w-12 h-12 md:w-14 md:h-14 flex-shrink-0">
+      <Link href="/" className="relative w-12 h-12 md:w-14 md:h-14 shrink-0">
         <Image
           src="/northstar-logo.png"
           alt="Northstar Logo"
@@ -53,8 +53,8 @@ export default function NavigationBar() {
                     flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors
                     ${
                       isActive
-                        ? "bg-primary/10 text-primary"
-                        : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                        ? " text-white"
+                        : "text-white/50 hover:text-white "
                     }
                   `}
                 >

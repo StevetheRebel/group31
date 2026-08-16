@@ -7,12 +7,13 @@ import { useState } from "react";
 type Tab = "order" | "stock";
 
 export default function dashboard() {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [activeTab, setActiveTab] = useState<Tab>("order");
 
   return (
-    <section className="max-w-5xl mx-auto px-4 md:px-8 lg:px-12 py-8 space-y-6">
+    <section className="max-w-5xl mx-auto px-4 pt-16 md:px-8 lg:px-12 py-8 space-y-6">
       {/* Header */}
-      <div className="space-y-2">
+      <div className="space-y-2 mt-12">
         <p className="text-xs font-semibold tracking-widest text-gray-500">
           CUSTOMER SELF-SERVICE
         </p>

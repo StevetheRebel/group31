@@ -19,10 +19,10 @@ export default function OrderResult({ order }: Props) {
   const statusColor = statusColors[order.status] || "bg-gray-100 text-gray-800";
 
   return (
-    <div className="p-5 bg-white rounded-lg border border-gray-200 shadow-sm space-y-4">
+    <div className="p-5 bg-gray-900 rounded-lg border border-white/50 shadow-sm space-y-4">
       <div className="flex items-end gap-4">
         {/* Product Image */}
-        <div className="relative w-20 h-20 flex-shrink-0">
+        <div className="relative w-20 h-20 shrink-0">
           <Image
             src={order.image || "/placeholder-image.png"}
             alt={order.product}
@@ -33,7 +33,7 @@ export default function OrderResult({ order }: Props) {
 
         <div className="flex-1 ">
           <div className="relative flex flex-wrap items-center justify-between gap-2 ">
-            <h3 className="text-lg font-semibold text-gray-900 line-clamp-1 ">
+            <h3 className="text-lg font-semibold text-white/70 line-clamp-1 ">
               {order.product}
             </h3>
             <span
@@ -50,13 +50,13 @@ export default function OrderResult({ order }: Props) {
       <div className="grid grid-cols-2 gap-3 pt-2 border-t border-gray-100">
         <div>
           <p className="text-xs text-gray-500">Order Date</p>
-          <p className="text-sm font-medium">
+          <p className="text-sm text-white/70 font-medium">
             {new Date(order.order_date).toLocaleDateString()}
           </p>
         </div>
         <div>
           <p className="text-xs text-gray-500">Expected Delivery</p>
-          <p className="text-sm font-medium">
+          <p className="text-sm text-white/70 font-medium">
             {order.expected_delivery
               ? new Date(order.expected_delivery).toLocaleDateString()
               : "—"}
