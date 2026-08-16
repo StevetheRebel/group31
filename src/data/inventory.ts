@@ -204,9 +204,22 @@ export const inventoryItems: InventoryItem[] = [
   },
 ];
 
-export function findInventoryItem(query: string): InventoryItem | undefined {
+// RETURNS THE FIRST MATCH
+// export function findInventoryItem(query: string): InventoryItem | undefined {
+//   const lowerQuery = query.toLowerCase().trim();
+//   return inventoryItems.find(
+//     (item) =>
+//       item.product_id.toLowerCase().includes(lowerQuery) ||
+//       item.name.toLowerCase().includes(lowerQuery)
+//   );
+// }
+
+// RETURNS AN ARRAY OF MATCHES
+export function findInventoryItems(query: string): InventoryItem[] {
   const lowerQuery = query.toLowerCase().trim();
-  return inventoryItems.find(
+  if (!lowerQuery) return [];
+
+  return inventoryItems.filter(
     (item) =>
       item.product_id.toLowerCase().includes(lowerQuery) ||
       item.name.toLowerCase().includes(lowerQuery)
