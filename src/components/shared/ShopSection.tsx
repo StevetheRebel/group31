@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import SectionHeader from "../shared/SectionHeader";
-import ProductCard from "./ProductCard";
 import { inventoryItems } from "@/src/data/inventory";
+import ProductCard from "../home/ProductCard";
 // import { ProductCard } from "./ProductCard";
 // import { SectionHeader } from "@/components/shared/SectionHeader";
 // import { Button } from "@/components/shared/Button";
